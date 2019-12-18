@@ -28,10 +28,31 @@
 // sort out mobile version of header.
 // TODO
 
+.entry-footer {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 0;
+}
 
+#colophon {
+  padding: 3em 0;
+  background:#f1f1f1;
+  .site-info {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.page {
+  margin-bottom: 0;
+}
+.site-content {
+  background: rgb(247, 247, 247);
+}
 .entry-content {
   margin-top: 0;
-  padding: 5em 1.5em 10em;
+  padding: 2em 1.5em;
   background: rgb(247, 247, 247);
   .content-wrap {
     max-width: 1140px;
@@ -40,12 +61,13 @@
   }
   .wpcf7,
   .faq-wrapper {
-    padding: 5em 1.5em;
+    padding: 5em 1.5em 2em;
     a {
       color: unset;
     }
   }
   .wpcf7 {
+    margin-top: 5em;
     @include box-shadow( 1px, 1px, 5px, 0px, rgba(51,51,51,0.15) );
     background: #fbfbfb;
 

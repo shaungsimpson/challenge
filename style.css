@@ -852,9 +852,29 @@ object {
   height: auto;
   margin: 0; }
 
+.entry-footer {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 0; }
+
+#colophon {
+  padding: 3em 0;
+  background: #f1f1f1; }
+  #colophon .site-info {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto; }
+
+.page {
+  margin-bottom: 0; }
+
+.site-content {
+  background: #f7f7f7; }
+
 .entry-content {
   margin-top: 0;
-  padding: 5em 1.5em 10em;
+  padding: 2em 1.5em;
   background: #f7f7f7; }
   .entry-content .content-wrap {
     max-width: 1140px;
@@ -862,11 +882,12 @@ object {
     margin-left: auto; }
   .entry-content .wpcf7,
   .entry-content .faq-wrapper {
-    padding: 5em 1.5em; }
+    padding: 5em 1.5em 2em; }
     .entry-content .wpcf7 a,
     .entry-content .faq-wrapper a {
       color: unset; }
   .entry-content .wpcf7 {
+    margin-top: 5em;
     -webkit-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     -moz-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
