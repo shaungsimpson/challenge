@@ -933,6 +933,16 @@ form {
     form .row .required {
       color: #ef2f24; }
 
+@media screen and (max-width: 720px) {
+  form .row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    form .row .half {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+      width: 100%; } }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
