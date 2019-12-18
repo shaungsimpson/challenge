@@ -860,36 +860,45 @@ object {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto; }
-  .entry-content > .wpcf7 {
+  .entry-content .wpcf7,
+  .entry-content .faq-wrapper {
+    padding: 5em 1.5em; }
+    .entry-content .wpcf7 a,
+    .entry-content .faq-wrapper a {
+      color: unset; }
+  .entry-content .wpcf7 {
     -webkit-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     -moz-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
-    padding: 5em 1.5em;
     background: #fbfbfb; }
-    .entry-content > .wpcf7 a {
+    .entry-content .wpcf7 a {
       color: unset; }
+
+h1, h2, h3, p {
+  padding: 0 0;
+  margin: 0 0;
+  color: black; }
+  h1.center, h2.center, h3.center, p.center {
+    text-align: center; }
+
+h1 {
+  font-weight: bold;
+  font-size: 43px; }
+
+h2 {
+  font-weight: semi-bold;
+  font-size: 26px; }
+
+p {
+  font-size: 14px; }
+  p.lead {
+    padding: 2em 0 3.5em;
+    font-size: 16px;
+    font-weight: 500; }
 
 form {
   max-width: 800px;
   margin: 0 auto; }
-  form h1, form h2, form h3, form p {
-    padding: 0 0;
-    margin: 0 0;
-    color: black; }
-    form h1.center, form h2.center, form h3.center, form p.center {
-      text-align: center; }
-  form h1 {
-    font-weight: bold;
-    font-size: 43px; }
-  form h2 {
-    font-weight: semi-bold;
-    font-size: 26px; }
-  form p {
-    font-size: 14px; }
-    form p.lead {
-      padding: 2em 0 3.5em;
-      font-size: 16px;
-      font-weight: 500; }
   form .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1006,9 +1015,6 @@ span.ajax-loader {
 .wpcf7-acceptance input[type=checkbox] {
   position: relative;
   visibility: hidden; }
-
-.wpcf7-acceptance input[type=checkbox] + span {
-  /*   border: 3px solid red;  */ }
 
 .wpcf7-acceptance input[type=checkbox] + span:before {
   display: block;

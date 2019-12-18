@@ -38,9 +38,15 @@
     margin-right: auto;
     margin-left: auto;
   }
-  >.wpcf7 {
-    @include box-shadow( 1px, 1px, 5px, 0px, rgba(51,51,51,0.15) );
+  .wpcf7,
+  .faq-wrapper {
     padding: 5em 1.5em;
+    a {
+      color: unset;
+    }
+  }
+  .wpcf7 {
+    @include box-shadow( 1px, 1px, 5px, 0px, rgba(51,51,51,0.15) );
     background: #fbfbfb;
 
     a {
@@ -49,33 +55,34 @@
   }
 }
 
+h1, h2, h3, p {
+  &.center {
+    text-align: center;
+  }
+  padding: 0 0;
+  margin: 0 0;
+  color: black;
+}
+h1 {
+  font-weight: bold;
+  font-size: 43px;
+}
+h2 {
+  font-weight: semi-bold;
+  font-size: 26px;
+}
+p {
+  font-size: 14px;
+  &.lead {
+    padding: 2em 0 3.5em;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
 form {
   max-width: 800px;
   margin: 0 auto;
-  h1, h2, h3, p {
-    &.center {
-      text-align: center;
-    }
-    padding: 0 0;
-    margin: 0 0;
-    color: black;
-  }
-  h1 {
-    font-weight: bold;
-    font-size: 43px;
-  }
-  h2 {
-    font-weight: semi-bold;
-    font-size: 26px;
-  }
-  p {
-    font-size: 14px;
-    &.lead {
-      padding: 2em 0 3.5em;
-      font-size: 16px;
-      font-weight: 500;
-    }
-  }
   .row {
     display: flex;
     width: 100%;
@@ -204,10 +211,6 @@ span.ajax-loader {
   input[type=checkbox] {
     position: relative;
     visibility: hidden;
-  }
-
-  input[type=checkbox] + span {
-    /*   border: 3px solid red;  */
   }
 
   input[type=checkbox] + span:before {
