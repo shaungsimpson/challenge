@@ -846,11 +846,18 @@ object {
 .page-id-7 header {
   display: none; }
 
-.page .post-thumbnail,
-.page .post-thumbnail img {
+.banner img {
   width: 100%;
   height: auto;
   margin: 0; }
+
+@media screen and (max-width: 720px) {
+  .banner img.wide {
+    display: none; } }
+
+@media screen and (min-width: 720.1px) {
+  .banner img.narrow {
+    display: none; } }
 
 .entry-footer {
   max-width: 1140px;
@@ -882,12 +889,12 @@ object {
     margin-left: auto; }
   .entry-content .wpcf7,
   .entry-content .faq-wrapper {
-    padding: 5em 1.5em 2em; }
+    padding: 5vw 1.5em; }
     .entry-content .wpcf7 a,
     .entry-content .faq-wrapper a {
       color: unset; }
   .entry-content .wpcf7 {
-    margin-top: 5em;
+    margin-top: 5vw;
     -webkit-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     -moz-box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
     box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.15);
@@ -1074,5 +1081,23 @@ span.ajax-loader {
 
 .wpcf7-acceptance input[type=checkbox]:checked + span:after {
   visibility: visible; }
+
+div.wpcf7-response-output {
+  margin: 3em 0;
+  padding: 2.5em 1.5em;
+  border: 2px solid rgba(227, 27, 44, 0.7);
+  border-radius: 7px; }
+  div.wpcf7-response-output.wpcf7-mail-sent-ok {
+    border-color: rgba(0, 0, 0, 0);
+    padding: 2em 0 3.5em;
+    font-size: 16px;
+    font-weight: 500; }
+
+.wpcf7 form.sent .form-section {
+  display: none; }
+
+form span .dnd-progress-bar,
+form span .dnd-icon-blank-file {
+  margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */

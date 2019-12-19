@@ -17,12 +17,22 @@
   display: none;
 }
 // make the thumbnail full width across header.
-.page .post-thumbnail,
-.page .post-thumbnail img
-{
-  width: 100%;
-  height: auto;
-  margin:0;
+.banner {
+  img {
+    width: 100%;
+    height: auto;
+    margin:0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .banner img.wide {
+      display:none;
+  }
+}
+@media screen and (min-width: 720.1px) {
+  .banner img.narrow {
+      display:none;
+  }
 }
 
 // sort out mobile version of header.
@@ -61,13 +71,13 @@
   }
   .wpcf7,
   .faq-wrapper {
-    padding: 5em 1.5em 2em;
+    padding: 5vw 1.5em;
     a {
       color: unset;
     }
   }
   .wpcf7 {
-    margin-top: 5em;
+    margin-top: 5vw;
     @include box-shadow( 1px, 1px, 5px, 0px, rgba(51,51,51,0.15) );
     background: #fbfbfb;
 
@@ -139,13 +149,13 @@ form {
 }
 
 @media screen and (max-width: 720px) {
-    form .row {
-      flex-wrap: wrap;
-      .half {
-        flex: 0 1 100%;
-        width: 100%;
-      }
+  form .row {
+    flex-wrap: wrap;
+    .half {
+      flex: 0 1 100%;
+      width: 100%;
     }
+  }
 }
 
 input[type="text"],
@@ -179,7 +189,7 @@ select {
 /**
  * styling for codedropz drag and drop file upload
  */
-.codedropz-upload-wrapper {
+ .codedropz-upload-wrapper {
   margin-top: 0.5em;
   color: #5b5b5b;
 }
@@ -276,4 +286,28 @@ span.ajax-loader {
   input[type=checkbox]:checked + span:after {
    visibility: visible;
  }
+}
+// CF7 response styling
+div.wpcf7-response-output {
+  margin: 3em 0;
+  padding: 2.5em 1.5em;
+  border:2px solid rgba(227, 27, 44, 0.7);
+  border-radius: 7px;
+  &.wpcf7-mail-sent-ok {
+    border-color: rgba(0, 0, 0, 0);
+    padding: 2em 0 3.5em;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.wpcf7 form.sent .form-section {
+  display: none;
+}
+
+// codedropz dnd file uploader styling
+form span {
+  .dnd-progress-bar,
+  .dnd-icon-blank-file {
+    margin-top: 0;
+  }
 }
